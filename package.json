@@ -1,0 +1,47 @@
+{
+  "name": "altSkype",
+  "author": "Vladislav Vishnyakov <split7fire@yandex.ru>",
+  "version": "1.0.0",
+  "description": "Alternative Skype Client",
+  "license": "GPL-3.0",
+  "main": "main.js",
+  "build": {
+    "appId": "it.split7fire.altskype",
+    "directories": {
+      "app": "."
+    },
+    "mac": {
+      "category": "public.app-category.social-networking",
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "deb",
+      "category": "Network",
+      "executableName": "altSkype"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist_x86": "electron-builder --arch=ia32",
+    "dist_x64": "electron-builder --arch=x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Split7fire/altSkype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Split7fire/altSkype/issues"
+  },
+  "homepage": "https://github.com/Split7fire/altSkype#readme",
+  "keywords": [
+    "web",
+    "skype",
+    "wrapper"
+  ],
+  "devDependencies": {
+    "electron": "^4.1.1",
+    "electron-builder": "^20.39.0"
+  }
+}
