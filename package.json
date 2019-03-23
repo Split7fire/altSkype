@@ -15,9 +15,12 @@
       "target": "dmg"
     },
     "linux": {
-      "target": "deb",
       "category": "Network",
-      "executableName": "altSkype"
+      "executableName": "altSkype",
+      "target": [
+         "deb", 
+         "AppImage"
+      ]
     }
   },
   "scripts": {
